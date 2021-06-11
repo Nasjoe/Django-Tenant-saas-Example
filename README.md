@@ -22,6 +22,7 @@ cd Docker/Development
 cp env_example .env
 
 # populate .env file with your variables.
+
 docker-compose --build up -d
 
 # Go inside the Django Container :
