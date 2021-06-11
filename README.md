@@ -38,10 +38,10 @@ docker exec -ti tibillet_django bash
   # Web Server ( only for test and dev ! )
   python /DjangoFiles/manage.py runserver_plus 0.0.0.0:8002
    
-  # For localhost, edit your /etc/host ( or equivalent if you don't use a Debian like oS
-  - 127.0.0.1       tibillet-local.me
-  - 127.0.0.1       www.tibillet-local.me
-  - 127.0.0.1       demo.tibillet-local.me
+  # For localhost, edit your /etc/host ( or equivalent if you don't use a Debian like OS ) with :
+127.0.0.1       tibillet-local.me
+127.0.0.1       www.tibillet-local.me
+127.0.0.1       demo.tibillet-local.me
 ```
 
 Test with www.tibillet-local.me:8002 and demo.tibillet-local.me:8002
