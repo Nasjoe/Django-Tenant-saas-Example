@@ -44,7 +44,7 @@ docker exec -ti tibillet_django bash
 127.0.0.1       demo.tibillet-local.me
 ```
 
-Test with www.tibillet-local.me:8002 and demo.tibillet-local.me:8002
+Test with http://www.tibillet-local.me:8002 and http://demo.tibillet-local.me:8002
 
 Same serveur, two web :)
 Enjoy !
