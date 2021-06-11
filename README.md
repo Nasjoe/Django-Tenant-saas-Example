@@ -1,4 +1,4 @@
-# Django Tenant Example.
+# Django Tenant SaaS Example.
 
 This application enables Django powered websites to have multiple tenants via PostgreSQL schemas. A vital feature for every Software-as-a-Service website.
 
