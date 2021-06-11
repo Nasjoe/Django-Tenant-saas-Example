@@ -1,25 +1,42 @@
-# TiBillet-Ticket
-Vente de billet et gestion évènementielle.
+Django Tenant Example.
 
-## Installation pour dev' :
+This application enables Django powered websites to have multiple tenants via PostgreSQL schemas. A vital feature for every Software-as-a-Service website.
+
+Django provides currently no simple way to support multiple tenants using the same project instance, even when only the data is different. Because we don’t want you running many copies of your project, you’ll be able to have:
+
+    Multiple customers running on the same instance
+
+    Shared and Tenant-Specific data
+
+    Tenant View-Routing
+    
+https://django-tenants.readthedocs.io/en/latest/index.html
+
+Base of TiBillet.re
+
+
+## Installation for test :
 
 ```shell
 cd Docker/Development
+cp env_example .env
+
+# populate .env file with your variables.
 docker-compose --build up -d
 
-# une fois buildé et lancé, on rentre dans le conteneur :
+# Go inside the Django Container :
 docker exec -ti tibillet_django bash
 
-# --> dans le conteneur :
+# --> within the container :
   # on crée la DB :
   python manage.py migrate
   
   # on crée le premier tenant "demo" :
   python manage.py create_demo_tenant
   
-  # On lance le serveur web de dev avec un alias ( cf bashrc dans root )  
-  # python /DjangoFiles/manage.py runserver_plus 0.0.0.0:8002
-  rsp 
+  # Web Server ( only for test and dev ! )
+  python /DjangoFiles/manage.py runserver_plus 0.0.0.0:8002
+   
 ```
 
 Test with www.$DOMAIN and demo.$DOMAIN
